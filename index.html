@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Formulario con Javascript</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <form class="form" id="form-validate">
+        <!-- Grupo: Usuario -->
+        <div class="form-group" id="group-user">
+          <label for="user" class="form-label">Usuario</label>
+          <div class="form-group-input">
+            <input type="text" class="form-input" name="user" id="user" placeholder="john123">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Nombre -->
+        <div class="form-group" id="group-name">
+          <label for="name" class="form-label">Nombre</label>
+          <div class="form-group-input">
+            <input type="text" class="form-input" name="name" id="name" placeholder="John Doe">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Contraseña -->
+        <div class="form-group" id="group-password">
+          <label for="password" class="form-label">Contraseña</label>
+          <div class="form-group-input">
+            <input type="password" class="form-input" name="password" id="password">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+        </div>
+
+        <!-- Grupo: Contraseña 2 -->
+        <div class="form-group" id="group-pass-confirm">
+          <label for="pass-confirm" class="form-label">Repetir Contraseña</label>
+          <div class="form-group-input">
+            <input type="password" class="form-input" name="pass-confirm" id="pass-confirm">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">Ambas contraseñas deben ser iguales.</p>
+        </div>
+
+        <!-- Grupo: Correo Electronico -->
+        <div class="form-group" id="group-email">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <div class="form-group-input">
+            <input type="email" class="form-input" name="email" id="email" placeholder="correo@correo.com">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+        </div>
+
+        <!-- Grupo: Teléfono -->
+        <div class="form-group" id="group-phone">
+          <label for="phone" class="form-label">Teléfono</label>
+          <div class="form-group-input">
+            <input type="text" class="form-input" name="phone" id="phone" placeholder="4491234567">
+            <i class="form-state-validation fas fa-times-circle"></i>
+          </div>
+          <p class="form-input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+        </div>
+
+        <!-- Grupo: Terminos y Condiciones -->
+        <div class="form-group" id="group-terms">
+          <label class="form-label">
+            <input class="form-checkbox" type="checkbox" name="terms" id="terms">
+            Acepto los Terminos y Condiciones
+          </label>
+        </div>
+
+        <div class="form-message" id="form-message">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+
+        <div class="form-group form-group-btn-send">
+          <button type="submit" class="form-btn">Enviar</button>
+          <p class="form-success-message" id="form-success-message">Formulario enviado exitosamente!</p>
+        </div>
+      </form>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+  </body>
+</html>
